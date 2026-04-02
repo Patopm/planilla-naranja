@@ -5,9 +5,13 @@
   "imports": {
     "#/*": "./src/*"
   },
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "vite dev --port 3000",
     "build": "vite build",
+    "build:vercel": "NITRO_PRESET=vercel vite build",
     "preview": "vite preview",
     "test": "vitest run",
     "format": "biome format",
@@ -29,6 +33,7 @@
     "lenis": "^1.3.21",
     "lucide-react": "^0.577.0",
     "motion": "^12.38.0",
+    "nitro": "^3.0.260311-beta",
     "radix-ui": "^1.4.3",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
