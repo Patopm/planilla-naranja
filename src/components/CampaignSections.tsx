@@ -167,11 +167,11 @@ export function HeroSection() {
 			ref={sectionRef}
 			className="hero-section hero-grid border-b border-(--line)"
 		>
-			<Badge className="mb-4" data-hero-badge>
+			<Badge className="mb-4 w-fit max-w-full" data-hero-badge>
 				Campaña estudiantil · {campaign.school}
 			</Badge>
 			<h1
-				className="campaign-title max-w-3xl text-4xl leading-tight font-semibold tracking-tight sm:text-5xl lg:text-6xl"
+				className="campaign-title hero-headline max-w-3xl text-[clamp(2.85rem,14vw,5.25rem)] leading-[0.92] font-semibold tracking-tight"
 				data-hero-title
 			>
 				{campaign.name}
@@ -182,19 +182,28 @@ export function HeroSection() {
 			>
 				{campaign.slogan}
 			</p>
-			<div className="mt-8 flex flex-wrap gap-3" data-hero-actions>
+			<div
+				className="hero-actions mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap"
+				data-hero-actions
+			>
 				<a
 					href={campaign.instagramUrl}
 					target="_blank"
 					rel="noreferrer"
-					className={cn(buttonVariants({ size: "lg" }))}
+					className={cn(
+						buttonVariants({ size: "lg" }),
+						"w-full justify-center sm:w-auto",
+					)}
 				>
 					<Instagram data-icon="inline-start" className="size-4" />
 					Ir a Instagram
 				</a>
 				<Link
 					to="/propuestas"
-					className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
+					className={cn(
+						buttonVariants({ variant: "secondary", size: "lg" }),
+						"w-full justify-center sm:w-auto",
+					)}
 				>
 					Ver propuestas
 				</Link>
@@ -307,12 +316,15 @@ export function CoordinatorCarousel() {
 			</ul>
 
 			<div
-				className="mt-8 flex justify-center border-t border-(--line) pt-6"
+				className="mt-8 flex border-t border-(--line) pt-6 sm:justify-center"
 				data-section-action
 			>
 				<Link
 					to="/integrantes"
-					className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
+					className={cn(
+						buttonVariants({ variant: "secondary", size: "lg" }),
+						"w-full justify-center sm:w-auto",
+					)}
 				>
 					<Users className="size-4" aria-hidden />
 					Ver todos los integrantes
@@ -369,7 +381,7 @@ export function HighlightedProposals() {
 
 	return (
 		<section ref={sectionRef} className="section-panel mt-8">
-			<div className="mb-5 flex items-end justify-between gap-4">
+			<div className="mb-5 flex items-start justify-between gap-4">
 				<div>
 					<p className="section-kicker mb-2" data-highlight-kicker>
 						Propuestas destacadas
@@ -404,10 +416,13 @@ export function HighlightedProposals() {
 				))}
 			</div>
 
-			<div className="mt-6 flex justify-center" data-highlight-action>
+			<div className="mt-6 flex sm:justify-center" data-highlight-action>
 				<Link
 					to="/propuestas"
-					className={cn(buttonVariants({ variant: "secondary", size: "lg" }))}
+					className={cn(
+						buttonVariants({ variant: "secondary", size: "lg" }),
+						"w-full justify-center sm:w-auto",
+					)}
 				>
 					<Sparkles data-icon="inline-start" className="size-4" />
 					Ver todas las propuestas

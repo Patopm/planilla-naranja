@@ -348,13 +348,16 @@ export function ProposalsContent() {
 	);
 
 	return (
-		<main ref={pageRef} className="page-wrap px-4 py-10 sm:py-14">
+		<main
+			ref={pageRef}
+			className="page-wrap px-3 py-6 sm:px-4 sm:py-10 lg:py-14"
+		>
 			<section className="mb-8 border-b border-(--line) pb-8">
 				<p className="section-kicker mb-2" data-hero-kicker>
 					Propuestas
 				</p>
 				<h1
-					className="campaign-title max-w-4xl text-5xl sm:text-6xl"
+					className="campaign-title max-w-4xl text-[clamp(2.6rem,13vw,4.75rem)] leading-[0.95]"
 					data-hero-title
 				>
 					Las propuestas de {campaign.name}
