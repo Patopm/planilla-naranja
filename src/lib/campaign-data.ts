@@ -37,7 +37,7 @@ export const coordinations = [
 		coordinator: "Fernanda Pozo",
 		coordinatorTagline:
 			"Una conexión entre planilla y comunidad para que juntos estemos en la misma línea",
-		spirits: ["Adrián Lopez"],
+		spirits: ["Adrián Lopez", "Naomi Martínez"],
 		description:
 			"Unión estudiantil, mayor visibilidad y participación de los estudiantes",
 		proposals: [
@@ -53,7 +53,7 @@ export const coordinations = [
 		coordinator: "Melanie Mondragon",
 		coordinatorTagline:
 			"Empatizando y liderando proyectos que realmente conecten con la comunidad estudiantil.",
-		spirits: [],
+		spirits: ["Joley Méndez"],
 		description:
 			"Más visibilidad al talento creativo, fomentar la participación estudiantil y una comunidad agradable.",
 		proposals: [
